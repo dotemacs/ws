@@ -1,0 +1,28 @@
+.Dd March 01, 2015
+.Dt WS 1
+.Os
+.Sh NAME
+.Nm ws
+.Nd serve directory contents over HTTP
+.Sh SYNOPSIS
+.Nm
+.Op Fl d
+.Sh DESCRIPTION
+The
+.Nm
+servers contents of a directory over HTTP. If no directory is given, it'll serve current working directory.
+.Sh EXAMPLES
+.Pp
+The command:
+.Pp
+.Dl \fBws\fR
+.Pp
+will server current directory's contents over HTTP on port \fB8765\fR.
+.Pp
+The command:
+.Pp
+.Dl \fBws -d /var/tmp\fR
+.Pp
+will serve the contents of \fB/var/tmp\fR on port \fB8765\fR.
+.Pp
+.Rs
