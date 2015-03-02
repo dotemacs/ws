@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	var port string = ":8765"
+	var port string = "8765"
 
 	pwd, err := os.Getwd()
 	if err != nil {
@@ -20,11 +20,12 @@ func main() {
 	}
 
 	dirPtr := flag.String("d", pwd, "a name of the directory which to serve")
+	portPtr := flag.String("p", port, "port to serve content on")
 	flag.Parse()
 
 	fmt.Println("serving contents of:", *dirPtr)
-	fmt.Printf("open http://localhost%v\n", port)
+	fmt.Printf("open http://localhost:%v\n", *portPtr)
 
 	http.Handle("/", http.FileServer(http.Dir(*dirPtr)))
-	http.ListenAndServe(port, nil)
+	http.ListenAndServe(":" + *portPtr, nil)
 }
