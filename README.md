@@ -12,6 +12,12 @@ While
 
 will serve the contents of **/var/tmp**.
 
+And
+
+    ws -p 3456
+
+will serve the contents as **http://localhost:3456**.
+
 ## Installation
 
 Requirements: [Go][go] lang.
