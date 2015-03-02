@@ -1,4 +1,4 @@
-prefix=/usr/local
+PREFIX=/usr/local
 
 ws:
 	go build ws.go
@@ -6,8 +6,8 @@ ws:
 all: ws
 
 install: all
-	cp ws $(prefix)
-	cp ws.1 $(prefix)/share/man/man1/
+	cp ws $(PREFIX)
+	cp ws.1 $(PREFIX)/share/man/man1/
 
 clean:
 	rm -rf *~ ws
